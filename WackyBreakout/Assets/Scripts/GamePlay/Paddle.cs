@@ -5,13 +5,14 @@ using UnityEngine;
 public class Paddle : MonoBehaviour
 {
     Rigidbody2D _rb;
-    float _halfWidth;
+    float halfColliderWidth;
+    float BounceAngleHalfRange = 60 * Mathf.Deg2Rad;
 
     // Start is called before the first frame update
     void Start()
     {
         _rb = this.GetComponent<Rigidbody2D>();
-        _halfWidth = this.GetComponent<BoxCollider2D>().size.x / 2;
+        halfColliderWidth = this.GetComponent<BoxCollider2D>().size.x / 2;
     }
 
     // Update is called once per frame
@@ -34,8 +35,8 @@ public class Paddle : MonoBehaviour
 
     float CalculateClampedX(float possibleNewX)
     {
-        float boundLeft = ScreenUtils.ScreenLeft + _halfWidth;
-        float boundRight = ScreenUtils.ScreenRight - _halfWidth;
+        float boundLeft = ScreenUtils.ScreenLeft + halfColliderWidth;
+        float boundRight = ScreenUtils.ScreenRight - halfColliderWidth;
 
         if (possibleNewX < boundLeft)
         {
@@ -48,5 +49,28 @@ public class Paddle : MonoBehaviour
         }
 
         return possibleNewX;
+    }
+
+    /// <summary>
+    /// Detects collision with a ball to aim the ball
+    /// </summary>
+    /// <param name="coll">collision info</param>
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        if (coll.gameObject.CompareTag("Ball"))
+        {
+            // calculate new ball direction
+            float ballOffsetFromPaddleCenter = transform.position.x -
+                coll.transform.position.x;
+            float normalizedBallOffset = ballOffsetFromPaddleCenter /
+                halfColliderWidth; 
+            float angleOffset = normalizedBallOffset * BounceAngleHalfRange;
+            float angle = Mathf.PI / 2 + angleOffset;
+            Vector2 direction = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
+
+            // tell ball to set direction to new direction
+            Ball ballScript = coll.gameObject.GetComponent<Ball>();
+            ballScript.SetDirection(direction);
+        }
     }
 }
