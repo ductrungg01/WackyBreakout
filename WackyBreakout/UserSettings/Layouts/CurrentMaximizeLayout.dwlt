@@ -25,7 +25,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 300}
   m_MaxSize: {x: 24288, y: 24288}
   vertical: 0
-  controlID: 4389
+  controlID: 4900
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -100,7 +100,7 @@ MonoBehaviour:
       y: 21
       width: 677.19995
       height: 354.4
-    m_Scale: {x: 1, y: 1}
+    m_Scale: {x: 1.1916527, y: 1.1916527}
     m_Translation: {x: 338.59998, y: 177.2}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -108,10 +108,10 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -338.59998
-      y: -177.2
-      width: 677.19995
-      height: 354.4
+      x: -284.1432
+      y: -148.70105
+      width: 568.2864
+      height: 297.4021
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 846.49994, y: 469.25}
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 300}
   m_MaxSize: {x: 8096, y: 24288}
   vertical: 1
-  controlID: 4349
+  controlID: 4876
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,8 +165,8 @@ MonoBehaviour:
     y: 0
     width: 456
     height: 215.2
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 5}
   m_Panes:
   - {fileID: 5}
@@ -208,18 +208,18 @@ MonoBehaviour:
       m_ExpandedIDs: f0f9fffffaf9ffff1afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Ball
+        m_OriginalName: Ball
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -11998
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
@@ -295,7 +295,8 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 1
     m_SearchArea: 1
-    m_Folders: []
+    m_Folders:
+    - Assets/Scripts/Configuration
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
@@ -334,24 +335,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 74f1ffff
-    m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000b06400003e650000107b0000
+    scrollPos: {x: 0, y: 3.7999878}
+    m_SelectedIDs: 46650000
+    m_LastClickedID: 25926
+    m_ExpandedIDs: ffffffff00000000b06400002a650000326500003e650000426500004c650000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Ball
+      m_OriginalName: Ball
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 32062
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 6}
     m_SearchString: 
@@ -362,8 +363,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 74f1ffff
-    m_LastClickedInstanceID: -3724
+    m_SelectedInstanceIDs: 46650000
+    m_LastClickedInstanceID: 25926
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -471,7 +472,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 4390
+  controlID: 4901
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -778,9 +779,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.40832454, y: -2.8478062, z: 0.08025462}
+    m_Target: {x: 0.9317731, y: -0.2797886, z: -0.018481443}
     speed: 2
-    m_Value: {x: 0.40832454, y: -2.8478062, z: 0.08025462}
+    m_Value: {x: 0.9317731, y: -0.2797886, z: -0.018481443}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -831,9 +832,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1.9745376
+    m_Target: 3.2658896
     speed: 2
-    m_Value: 1.9745376
+    m_Value: 3.2658896
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -944,7 +945,7 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -3724
+  m_LastInspectedObjectInstanceID: 25926
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
