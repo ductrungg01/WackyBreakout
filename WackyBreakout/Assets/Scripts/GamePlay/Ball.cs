@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Ball : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class Ball : MonoBehaviour
         Vector2 moveDirection = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
 
         _rb.AddForce(moveDirection * ConfigurationUtils.BallImpulseForce);
+        //_rb.velocity = moveDirection * ConfigurationUtils.BallImpulseForce;
     }
 
     // Update is called once per frame
@@ -26,6 +28,6 @@ public class Ball : MonoBehaviour
 
     public void SetDirection(Vector2 direction)
     {
-        _rb.velocity = _rb.velocity.magnitude * direction;
+        _rb.AddForce(direction * ConfigurationUtils.BallImpulseForce);
     }
 }
